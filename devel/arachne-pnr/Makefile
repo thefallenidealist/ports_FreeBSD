@@ -10,13 +10,13 @@ COMMENT=	Place and route tool for FPGAs
 
 LICENSE=	MIT
 
-USES=		gmake
+BUILD_DEPENDS=	${LOCALBASE}/share/icebox:devel/icestorm
+
+USES+=		gmake
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	cseed
 GH_TAGNAME=	6701132
-
-BUILD_DEPENDS=	${LOCALBASE}/share/icebox:devel/icestorm
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/arachne-pnr

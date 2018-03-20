@@ -10,34 +10,32 @@ COMMENT=	Lattice iCE40 FPGA examples for Olimex HX1K board
 
 LICENSE=		APACHE20
 
+RUN_DEPENDS=	${LOCALBASE}/bin/arachne-pnr:devel/arachne-pnr \
+				${LOCALBASE}/bin/icepack:devel/icestorm \
+				${LOCALBASE}/bin/yosys:devel/yosys
+
+USES+=			${GMAKE}
+
 NO_ARCH=		yes
 USE_GITHUB=		yes
 GH_ACCOUNT=		OLIMEX
 GH_PROJECT=		iCE40HX1K-EVB
 GH_TAGNAME=		69df5a7
 
-USES=			${GMAKE}
-
-RUN_DEPENDS=	${LOCALBASE}/bin/arachne-pnr:devel/arachne-pnr \
-				${LOCALBASE}/bin/icepack:devel/icestorm \
-				${LOCALBASE}/bin/yosys:devel/yosys
-
 EXAMPLES_NAME=	lattice-ice40-olimex
+EXAMPLESDIR=	${PREFIX}/share/examples/
 
 do-build:
-	@# do nothing because original Makefile does not have "make install command"
+	${MAKE_CMD} -C ${WRKSRC}/demo/ice40hx1k-evb
+	${MAKE_CMD} -C ${WRKSRC}/demo/ice40-io-video
 
 do-install:
-	${GMAKE} -C ${WRKSRC}/demo/ice40hx1k-evb
-	${GMAKE} -C ${WRKSRC}/demo/ice40-io-video
-
-post-stage:
-	@mkdir ${STAGEDIR}${LOCALBASE}/share/examples/${EXAMPLES_NAME}
-	@${CP} ${WRKSRC}/demo/ice40hx1k-evb/example.rpt  ${STAGEDIR}${LOCALBASE}/share/examples/${EXAMPLES_NAME}/ice40hx1k-blinky.v
-	@${CP} ${WRKSRC}/demo/ice40hx1k-evb/example.rpt  ${STAGEDIR}${LOCALBASE}/share/examples/${EXAMPLES_NAME}/ice40hx1k-blinky.rpt
-	@${CP} ${WRKSRC}/demo/ice40hx1k-evb/example.bin  ${STAGEDIR}${LOCALBASE}/share/examples/${EXAMPLES_NAME}/ice40hx1k-blinky.bin
-	@${CP} ${WRKSRC}/demo/ice40-io-video/example.rpt ${STAGEDIR}${LOCALBASE}/share/examples/${EXAMPLES_NAME}/ice40hx1k-vga-ps2.v
-	@${CP} ${WRKSRC}/demo/ice40-io-video/example.rpt ${STAGEDIR}${LOCALBASE}/share/examples/${EXAMPLES_NAME}/ice40hx1k-vga-ps2.rpt
-	@${CP} ${WRKSRC}/demo/ice40-io-video/example.bin ${STAGEDIR}${LOCALBASE}/share/examples/${EXAMPLES_NAME}/ice40hx1k-vga-ps2.bin
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/examples/${EXAMPLES_NAME}
+	@${CP} ${WRKSRC}/demo/ice40hx1k-evb/example.v    ${STAGEDIR}${PREFIX}/share/examples/${EXAMPLES_NAME}/ice40hx1k-blinky.v
+	@${CP} ${WRKSRC}/demo/ice40hx1k-evb/example.rpt  ${STAGEDIR}${PREFIX}/share/examples/${EXAMPLES_NAME}/ice40hx1k-blinky.rpt
+	@${CP} ${WRKSRC}/demo/ice40hx1k-evb/example.bin  ${STAGEDIR}${PREFIX}/share/examples/${EXAMPLES_NAME}/ice40hx1k-blinky.bin
+	@${CP} ${WRKSRC}/demo/ice40-io-video/example.v   ${STAGEDIR}${PREFIX}/share/examples/${EXAMPLES_NAME}/ice40hx1k-vga-ps2.v
+	@${CP} ${WRKSRC}/demo/ice40-io-video/example.rpt ${STAGEDIR}${PREFIX}/share/examples/${EXAMPLES_NAME}/ice40hx1k-vga-ps2.rpt
+	@${CP} ${WRKSRC}/demo/ice40-io-video/example.bin ${STAGEDIR}${PREFIX}/share/examples/${EXAMPLES_NAME}/ice40hx1k-vga-ps2.bin
 
 .include <bsd.port.mk>

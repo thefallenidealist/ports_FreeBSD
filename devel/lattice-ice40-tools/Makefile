@@ -11,13 +11,13 @@ COMMENT=	Open source tools for Lattice iCE40 FPGAs
 LICENSE=		ISCL MIT
 LICENSE_COMB=	multi
 
-NO_BUILD=		yes
-NO_ARCH=		yes
-
 RUN_DEPENDS=	${LOCALBASE}/bin/arachne-pnr:devel/arachne-pnr \
 				${LOCALBASE}/bin/icepack:devel/icestorm \
 				${LOCALBASE}/bin/yosys:devel/yosys
 
-USES=			metaport
+NO_BUILD=		yes
+NO_ARCH=		yes
+
+USES+=			metaport
 
 .include <bsd.port.mk>

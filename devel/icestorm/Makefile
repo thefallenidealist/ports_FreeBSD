@@ -10,15 +10,15 @@ COMMENT=	IceStorm tools for Lattice iCE40 FPGAs
 
 LICENSE=	ISCL
 
-USES=	gmake python:3.3+ shebangfix pkgconfig
+USES+=	gmake python:3.3+ shebangfix pkgconfig
 SHEBANG_FILES=	${WRKSRC}/icebox/*.py \
 				${WRKSRC}/icebox/Makefile
 
-USE_GITHUB=		yes
-GH_ACCOUNT=		cliffordwolf
-GH_TAGNAME=		4476d83
+USE_GITHUB=	yes
+GH_ACCOUNT=	cliffordwolf
+GH_TAGNAME=	4476d83
 
-LIB_DEPENDS+=libftdi.so:devel/libftdi
+LIB_DEPENDS+=libftdi1.so:devel/libftdi1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/python3 /python${PYTHON3_DEFAULT} /g' \
