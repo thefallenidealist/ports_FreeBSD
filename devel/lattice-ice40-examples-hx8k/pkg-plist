@@ -1,6 +1,6 @@
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/lattice-ice40-olimex/ice40hx8k-vga-ps2.bin
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/lattice-ice40-olimex/ice40hx8k-vga-ps2.rpt
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/lattice-ice40-olimex/ice40hx8k-vga-ps2.v
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/lattice-ice40-olimex/ice40hx8k-blinky.bin
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/lattice-ice40-olimex/ice40hx8k-blinky.rpt
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/lattice-ice40-olimex/ice40hx8k-blinky.v
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ice40hx8k-blinky.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ice40hx8k-blinky.rpt
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ice40hx8k-blinky.v
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ice40hx8k-vga-ps2.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ice40hx8k-vga-ps2.rpt
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ice40hx8k-vga-ps2.v

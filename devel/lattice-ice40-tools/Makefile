@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	lattice-ice40-tools
-PORTVERSION=20180310
+PORTVERSION=g20180310
 CATEGORIES=	devel
 
 MAINTAINER=	propaliidealist@gmail.com
