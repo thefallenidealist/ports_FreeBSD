@@ -2,27 +2,28 @@
 # $FreeBSD$
 
 PORTNAME=	yosys
-PORTVERSION=20180310
+DISTVERSION=	0.7-783
+DISTVERSIONSUFFIX=	-gbab39eac
 CATEGORIES=	devel
 
 MAINTAINER=	propaliidealist@gmail.com
 COMMENT=	Yosys Open SYnthesis Suite
 
-LICENSE=	ISCL
+LICENSE=		ISCL
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	gawk:lang/gawk \
 				pkgconf:devel/pkgconf \
-				python3.6:lang/python36 \
 				tclsh:lang/tcl-wrapper \
 				bash:shells/bash \
 				abc:devel/abc
 
-USES+=			gmake shebangfix readline tcl bison
+USES=			gmake shebangfix readline tcl bison python:3.6+,build
 SHEBANG_FILES=	${WRKSRC}/misc/yosys-config.in
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	YosysHQ
-GH_TAGNAME=	efaef82
+GH_TAGNAME=	bab39eacce5c17c42d50a3a60a67cc8a9ee52d98
 
 LIB_DEPENDS+=	libffi.so:devel/libffi
 
@@ -37,10 +38,7 @@ post-patch:
 		${WRKSRC}/tests/bram/run-test.sh
 	@${SED} -i '' 's/ABCEXTERNAL ?=/ABCEXTERNAL ?= abc/g' ${WRKSRC}/Makefile
 
-# post-build:
-# 	@${REINPLACE_CMD} -e 's/python3 /python${PYTHON3_DEFAULT} /g' ${WRKSRC}/yosys-config
-
-post-stage:
+post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/yosys
 	${SED} -i '' 's/python3/python${PYTHON3_DEFAULT}/g' ${STAGEDIR}${LOCALBASE}/bin/yosys-smtbmc
 

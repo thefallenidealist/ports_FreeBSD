@@ -4,6 +4,7 @@
 %%DATADIR%%/cells.lib
 %%DATADIR%%/coolrunner2/cells_latch.v
 %%DATADIR%%/coolrunner2/cells_sim.v
+%%DATADIR%%/coolrunner2/tff_extract.v
 %%DATADIR%%/coolrunner2/xc2_dff.lib
 %%DATADIR%%/dff2ff.v
 %%DATADIR%%/gowin/cells_map.v
@@ -67,10 +68,10 @@
 %%DATADIR%%/techmap.v
 %%DATADIR%%/xilinx/arith_map.v
 %%DATADIR%%/xilinx/brams_bb.v
+%%DATADIR%%/xilinx/brams_init_%%PYTHON_SUFFIX%%.vh
 %%DATADIR%%/xilinx/brams_init_16.vh
 %%DATADIR%%/xilinx/brams_init_18.vh
 %%DATADIR%%/xilinx/brams_init_32.vh
-%%DATADIR%%/xilinx/brams_init_36.vh
 %%DATADIR%%/xilinx/brams_map.v
 %%DATADIR%%/xilinx/brams.txt
 %%DATADIR%%/xilinx/cells_map.v

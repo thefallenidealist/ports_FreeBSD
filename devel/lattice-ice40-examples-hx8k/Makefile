@@ -11,7 +11,8 @@ COMMENT=	Lattice iCE40 FPGA examples for Olimex HX8K board
 LICENSE=		APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${LOCALBASE}/bin/arachne-pnr:devel/arachne-pnr \
+BUILD_DEPENDS=	${LOCALBASE}/bin/arachne-pnr:devel/arachne-pnr \
+				${LOCALBASE}/bin/abc:devel/abc \
 				${LOCALBASE}/bin/icepack:devel/icestorm \
 				${LOCALBASE}/bin/yosys:devel/yosys
 

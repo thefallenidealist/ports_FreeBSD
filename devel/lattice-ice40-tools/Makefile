@@ -12,6 +12,7 @@ LICENSE=		ISCL MIT
 LICENSE_COMB=	multi
 
 RUN_DEPENDS=	${LOCALBASE}/bin/arachne-pnr:devel/arachne-pnr \
+				${LOCALBASE}/bin/abc:devel/abc \
 				${LOCALBASE}/bin/icepack:devel/icestorm \
 				${LOCALBASE}/bin/yosys:devel/yosys
 
