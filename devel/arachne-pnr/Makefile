@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	arachne-pnr
-PORTVERSION=g20180310
+PORTVERSION=	g20180310
 CATEGORIES=	devel
 
 MAINTAINER=	propaliidealist@gmail.com
 COMMENT=	Place and route tool for FPGAs
 
-LICENSE=		MIT
+LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icebox:devel/icestorm

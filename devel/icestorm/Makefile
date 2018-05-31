@@ -2,20 +2,20 @@
 # $FreeBSD$
 
 PORTNAME=	icestorm
-PORTVERSION=g20180310
+PORTVERSION=	g20180310
 CATEGORIES=	devel
 
 MAINTAINER=	propaliidealist@gmail.com
 COMMENT=	IceStorm tools for Lattice iCE40 FPGAs
 
-LICENSE=		ISCL
+LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=libftdi1.so:devel/libftdi1
+LIB_DEPENDS=	libftdi1.so:devel/libftdi1
 
-USES=	gmake python:3.3+ shebangfix pkgconfig
+USES=		gmake python:3.3+ shebangfix pkgconfig
 SHEBANG_FILES=	${WRKSRC}/icebox/*.py \
-				${WRKSRC}/icebox/Makefile
+		${WRKSRC}/icebox/Makefile
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	cliffordwolf

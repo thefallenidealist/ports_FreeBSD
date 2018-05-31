@@ -1,10 +1,10 @@
 # Created by: Johnny Sorocil <propaliidealist@gmail.com>
 # $FreeBSD$
 
-PORTNAME=	yosys
-DISTVERSION=	0.7-783
+PORTNAME=		yosys
+DISTVERSION=		0.7-783
 DISTVERSIONSUFFIX=	-gbab39eac
-CATEGORIES=	devel
+CATEGORIES=		devel
 
 MAINTAINER=	propaliidealist@gmail.com
 COMMENT=	Yosys Open SYnthesis Suite
@@ -13,12 +13,12 @@ LICENSE=		ISCL
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	gawk:lang/gawk \
-				pkgconf:devel/pkgconf \
-				tclsh:lang/tcl-wrapper \
-				bash:shells/bash \
-				abc:devel/abc
+		pkgconf:devel/pkgconf \
+		tclsh:lang/tcl-wrapper \
+		bash:shells/bash \
+		abc:devel/abc
 
-USES=			gmake shebangfix readline tcl bison python:3.6+,build
+USES=		gmake shebangfix readline tcl bison python:3.6+,build
 SHEBANG_FILES=	${WRKSRC}/misc/yosys-config.in
 
 USE_GITHUB=	yes
