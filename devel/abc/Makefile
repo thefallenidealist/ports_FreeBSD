@@ -1,15 +1,17 @@
-# Created by: Johnny Sorocil <propaliidealist@gmail.com>
+# Created by: Johnny Sorocil <jsorocil@gmail.com>
 # $FreeBSD$
 
 PORTNAME=	abc
 PORTVERSION=	g20180310
 CATEGORIES=	devel
 
-MAINTAINER=	propaliidealist@gmail.com
+MAINTAINER=	jsorocil@gmail.com
 COMMENT=	System for Sequential Logic Synthesis and Formal Verification
 
-LICENSE=	BSD
+LICENSE=	ABC
+LICENSE_NAME=	abc license (similiar to MIT)
 LICENSE_FILE=	${WRKSRC}/copyright.txt
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		gmake readline
 

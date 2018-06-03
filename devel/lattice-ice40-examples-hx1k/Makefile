@@ -1,11 +1,11 @@
-# Created by: Johnny Sorocil <propaliidealist@gmail.com>
+# Created by: Johnny Sorocil <jsorocil@gmail.com>
 # $FreeBSD$
 
 PORTNAME=	lattice-ice40-examples-hx1k
 PORTVERSION=	g20180310
 CATEGORIES=	devel
 
-MAINTAINER=	propaliidealist@gmail.com
+MAINTAINER=	jsorocil@gmail.com
 COMMENT=	Lattice iCE40 FPGA examples for Olimex HX1K board
 
 LICENSE=	APACHE20

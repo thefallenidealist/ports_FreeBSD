@@ -1,11 +1,11 @@
-# Created by: Johnny Sorocil <propaliidealist@gmail.com>
+# Created by: Johnny Sorocil <jsorocil@gmail.com>
 # $FreeBSD$
 
 PORTNAME=	arachne-pnr
 PORTVERSION=	g20180310
 CATEGORIES=	devel
 
-MAINTAINER=	propaliidealist@gmail.com
+MAINTAINER=	jsorocil@gmail.com
 COMMENT=	Place and route tool for FPGAs
 
 LICENSE=	MIT

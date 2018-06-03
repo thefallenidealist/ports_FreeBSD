@@ -1,11 +1,11 @@
-# Created by: Johnny Sorocil <propaliidealist@gmail.com>
+# Created by: Johnny Sorocil <jsorocil@gmail.com>
 # $FreeBSD$
 
 PORTNAME=	icestorm
 PORTVERSION=	g20180310
 CATEGORIES=	devel
 
-MAINTAINER=	propaliidealist@gmail.com
+MAINTAINER=	jsorocil@gmail.com
 COMMENT=	IceStorm tools for Lattice iCE40 FPGAs
 
 LICENSE=	ISCL
@@ -26,7 +26,7 @@ post-patch:
 		${WRKSRC}/icebox/Makefile \
 		${WRKSRC}/icetime/Makefile
 
-post-stage:
+post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/icepack
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/icepll
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/icebram
