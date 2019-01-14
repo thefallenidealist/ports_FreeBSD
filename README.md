@@ -18,3 +18,6 @@ or you can use prebuilt version:
 ## Misc
 UrJTAG
 - updated to 2017.10.
+
+htop
+- add vim-like keybindings (hjkl, Ctrl-B/F, g/G)

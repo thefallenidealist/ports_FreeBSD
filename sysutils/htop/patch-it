@@ -1,0 +1,42 @@
+#!/bin/sh
+# Created 190113
+# - script which helps making my htop changes in FreeBSD ports' files:
+# - changes are already saved in form of git diff in "git.diff" file
+# - should be run from /usr/ports/sysutils/htop
+
+make clean
+make extract
+make patch
+
+cd work/htop*/
+
+git init
+git add .
+git commit -m "initial"
+
+for i in Action.c Panel.c Panel.h htop.1.in ; do
+	cp -f $i $i.orig
+done
+
+git apply ../../git.diff
+
+for i in Action.c Panel.c Panel.h htop.1.in ; do
+	diff -u $i.orig $i > ../../files/patch-$i
+done
+
+exit;
+
+# commit message:
+Add vim like keybindings:
+
+- hjkl
+- Ctrl-F, Ctrl-B
+- x for kill (instead of 'k')
+- g/G for Home/End
+- man page updated to reflect new shortcuts
+
+Files added to standard sysutils/htop:
+patch-Action.c
+patch-htop.1.in
+patch-Panel.c
+patch-Panel.h
