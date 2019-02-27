@@ -21,3 +21,6 @@ UrJTAG
 
 htop
 - add vim-like keybindings (hjkl, Ctrl-B/F, g/G)
+
+arm-none-eabi-gdb
+- add python support
