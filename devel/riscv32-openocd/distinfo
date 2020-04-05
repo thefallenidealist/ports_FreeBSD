@@ -1,0 +1,7 @@
+TIMESTAMP = 1584180044
+SHA256 (riscv-mcu-riscv-openocd-g20191212-9e6a7a2e5320cdaeeafcc79debedfd216f443f19_GH0.tar.gz) = 4dd134c33b7307a7c3acad75658e8c41dc17723c920796bf475bb3e0c0f13819
+SIZE (riscv-mcu-riscv-openocd-g20191212-9e6a7a2e5320cdaeeafcc79debedfd216f443f19_GH0.tar.gz) = 2649195
+SHA256 (msteveb-jimtcl-0.77_GH0.tar.gz) = 0874c50ab932c68940c29c48c014266a322c54ff357a0919386f32cc341eb3b2
+SIZE (msteveb-jimtcl-0.77_GH0.tar.gz) = 2925776
+SHA256 (syntacore-libjaylink-0.1.0-17-g4959f4e_GH0.tar.gz) = e9f88f1236b969b941d9414b964a7e31b97415ac8223cce51bc009331154a72c
+SIZE (syntacore-libjaylink-0.1.0-17-g4959f4e_GH0.tar.gz) = 71976

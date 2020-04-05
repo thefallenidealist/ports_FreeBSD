@@ -1,0 +1,3 @@
+bin/riscv32-openocd
+%%DATADIR%%/scripts/interface/ftdi/sipeed-rv-debugger.cfg
+%%DATADIR%%/scripts/board/gd32vf103.cfg
